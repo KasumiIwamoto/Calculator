@@ -40,4 +40,8 @@ public class MainActivity extends AppCompatActivity {
         number1 = number1*10 + 1;
         num1Text.setText(number1+ "");
     }
+    public void bt2(View v){
+        number1 = number1*10 + 2;
+        num1Text.setText(number1+ "");
+    }
 }

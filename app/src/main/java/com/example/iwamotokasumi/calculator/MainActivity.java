@@ -37,11 +37,76 @@ public class MainActivity extends AppCompatActivity {
         answerText.setText("");
     }
     public void bt1(View v){
-        number1 = number1*10 + 1;
-        num1Text.setText(number1+ "");
+        if(ope == 0){
+            number1 = number1*10 + 1;
+            num1Text.setText(number1+ "");
+        }
+       else if(ope > 0){
+            number2 = number2*10 + 1;
+            num2Text.setText(number1+ "");
+        }
     }
     public void bt2(View v){
         number1 = number1*10 + 2;
         num1Text.setText(number1+ "");
+    }
+    public void bt3(View v){
+        number1 = number1*10 + 3;
+        num1Text.setText(number1+ "");
+    }
+    public void bt4(View v){
+        number1 = number1*10 + 4;
+        num1Text.setText(number1+ "");
+    }
+    public void bt5(View v){
+        number1 = number1*10 + 5;
+        num1Text.setText(number1+ "");
+    }
+    public void bt6(View v){
+        number1 = number1*10 + 6;
+        num1Text.setText(number1+ "");
+    }
+    public void bt7(View v){
+        number1 = number1*10 + 7;
+        num1Text.setText(number1+ "");
+    }
+    public void bt8(View v){
+        number1 = number1*10 + 8;
+        num1Text.setText(number1+ "");
+    }
+    public void bt9(View v){
+        number1 = number1*10 + 9;
+        num1Text.setText(number1+ "");
+    }
+    public void btclear(View v){
+        num1Text.setText("");
+        num2Text.setText("");
+        opeText.setText("");
+       answerText.setText("");
+        ope = -1;
+    }
+    //+ボタンが押された時
+    public void btplus(View v){
+        ope = 1;
+        opeText.setText("+");
+        num2Text.setText("");
+    }
+    //-ボタンが押された時
+    public void btminus(View v){
+        ope = 2;
+        opeText.setText("-");
+        num2Text.setText("");
+    }
+    //＝ボタンが押された時
+    public void btequal(View v){
+        if(ope == 1) {
+            ansewer = number1 + number2;
+            answerText.setText("=" + ansewer);
+            ope = -1;
+        }else if(ope == 2){
+                ansewer = number1 - number2;
+                answerText.setText("=" + ansewer);
+                ope = -1;
+        }
     }
 }
